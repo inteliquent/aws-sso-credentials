@@ -60,19 +60,6 @@ You can run `awssso` passing it the name of the profile you want credentials for
   $ awssso --profile dev-env
 ```
 
-Optionally feel free to add these functions to your `.bash_profile`  or `.zsh_profile`  
-```
-# This will log you into all your sso profiles
-all() {
-  awssso --login --all
-}
-
-# This will log into the current $AWS_PROFILE
-sso() {
-  awssso --profile $AWS_PROFILE --login
-}
-```
-
 If you don't pass a profile name it will allow you to select from a list:
 
 ```
@@ -93,6 +80,20 @@ You can then use these credentials with the tool of your choice either by passin
 ```
 
 If you want to avoid having to set a profile, use the `-d` option detailed below.
+
+
+Optionally feel free to add these functions to your `.bash_profile`  or `.zsh_profile`  
+```
+# This will log you into all your sso profiles
+all() {
+  awssso --login --all
+}
+
+# This will log into the current $AWS_PROFILE
+sso() {
+  awssso --profile $AWS_PROFILE --login
+}
+```
 
 ### Options
 
